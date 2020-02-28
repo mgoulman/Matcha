@@ -245,7 +245,7 @@ export default function TitlebarGridList(props) {
           {users.isUsers === true && users.users && users.users.map(tile => (
             
             <GridList key={tile.user.id}>
-              <ViewProfile key={tile.user.id}  user={tile.user} images={tile.images} interests={tile.interests}
+              <ViewProfile user={tile.user} images={tile.images} interests={tile.interests}
               handleBlock={handleBlock} handleLike={handleLike} handleViewProfile={handleViewProfile} handleDislike={handleDislike}/>
             </GridList>
           ))}

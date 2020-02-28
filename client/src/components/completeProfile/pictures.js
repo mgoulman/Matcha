@@ -100,8 +100,8 @@ const  Pictures = (props) => {
                       className={classes.titleBar}
                       title={tile.isProfilePic === 1 && 'Profile picture'}
                       actionIcon={
-                        <Tooltip title ="set as a profile pic"><IconButton aria-label="profilePic"  onClick={(e) => setProfilePicture(tile.id)}>
-                          <CheckCircleSharpIcon  onClick ={handleChangeColor} className={ tile.isProfilePic === 1 ? classes.ver : classes.non}/>
+                        <Tooltip title ="set as a profile pic"><IconButton aria-label="profilePic"  onClick={(e) => {setProfilePicture(tile.id,tile.path);handleChangeColor()}}>
+                          <CheckCircleSharpIcon  className={ tile.isProfilePic === 1 ? classes.ver : classes.non}/>
                         </IconButton></Tooltip>
                         
                       }
